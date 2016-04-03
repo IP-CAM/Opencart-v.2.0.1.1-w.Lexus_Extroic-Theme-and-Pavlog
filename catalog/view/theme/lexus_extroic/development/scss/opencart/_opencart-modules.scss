@@ -1,0 +1,177 @@
+// owl-carousel default opencart
+body .owl-carousel {
+    box-shadow: none;
+    border: 1px solid $border-color-base;
+    border-radius: 0;
+}
+
+// pav carousel
+.#{$app-brand-prefix}carousel {
+    background-color: white;
+    border: 1px solid $border-color-base;
+    border-radius: 0;
+
+    .carousel-control{
+        display: none;
+        &.middle.left {
+            @include rtl-left(-1px);
+        }
+        &.middle.right {
+            @include rtl-right(-1px);
+        }
+    }
+
+    &:hover {
+        .carousel-control {
+            display: block;
+        }
+    }
+}
+
+//pavreassurances
+.#{$app-brand-prefix}reassurances {
+    background-color: #fff;
+    border: 1px solid $border-color-base;
+    overflow: hidden;
+    .media {
+        padding: 30px;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            h4 , a{
+                color: $theme-color;
+            }
+        }
+    }
+    .media-body {
+        h4 {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+}
+
+// Module fitter
+.filter {
+    .filter-title {
+        color: #000;
+        font-weight: bold;
+    }
+    .filter-content {
+        padding-left: 30px;
+        padding-right: 30px;
+        label {
+            font-weight: 300;
+        }
+    }
+
+    .radio, .checkbox {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+// pavproducts
+.pavproducts {
+    border: 1px solid $border-color-base;
+    .tab-pane {
+        position: relative;
+    }
+    .nav > li > a {
+        padding: 18px 10px;
+    }
+    .products-block {
+        border: none;
+    }
+
+    .carousel-control{
+        display: none;
+        &.middle.left {
+            @include rtl-left(-1px);
+        }
+        &.middle.right {
+            @include rtl-right(-1px);
+        }
+    }
+
+    &:hover {
+        .carousel-control {
+            display: block;
+        }
+    }
+}
+
+.cart {
+    .dropdown-menu {
+        padding: 20px;
+        min-width: 400px;
+    }
+}
+
+// banner builder
+.banner-wrapper-margin {
+    .banner-wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+.nomargin .box {
+    margin-bottom: 0;
+}
+
+//fix-most-views productcarousel
+.fix-most-views {
+    .product-label, .rating, .cart, .action {
+        display: none;
+    }
+    .#{$products-row-selector} {
+        .#{$products-col-selector} {
+            min-height: 155px;
+            padding: 20px;
+        }
+    }
+    .product-block {
+        .name {
+            // margin-top: 0;
+        }
+        blockquote {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    }
+    .border {
+        &:after {
+            height: 0;
+        }
+    }
+}
+
+// newlatter
+.pav-newsletter {
+    .btn {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        border-radius: 0;
+        z-index: 0;
+        &:hover {
+            z-index: 0;
+            // background-color: $brand-danger;
+            // border-color: $brand-danger;
+        }
+    }
+
+    .valid{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 5px;
+        z-index: 9999;
+    }
+}

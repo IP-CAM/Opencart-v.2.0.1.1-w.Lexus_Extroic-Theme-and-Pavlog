@@ -1,0 +1,39 @@
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: $screen-md-min) {
+    .row-offcanvas {
+        position: relative;
+        @include transition(all 0.25s ease-out);
+    }
+    .row-offcanvas-right {
+        @include rtl-right(0);
+    }
+    .row-offcanvas-left {
+        @include rtl-left(0);
+    }
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+        @include rtl-right(-50%);
+    }
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        @include rtl-left(-50%);
+    }
+    .row-offcanvas-right.active {
+        @include rtl-right(50%);
+    }
+    .row-offcanvas-left.active {
+        @include rtl-left(50%);
+    }
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+    .bottom-offcanvas {
+        border-top: 1px solid $border-color-base;
+        padding: 10px 0;
+    }
+}

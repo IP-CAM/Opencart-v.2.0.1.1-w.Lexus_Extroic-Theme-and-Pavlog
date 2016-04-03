@@ -1,0 +1,554 @@
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "../vars/bootstrap";
+@import "../mixins/bootstrap";
+
+// Links
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+    &:focus {
+        @include tab-focus;
+    }
+    &.bold {
+        color: $headings-color;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            color: $link-hover-color;
+        }
+    }
+    &.color {
+        color: $theme-color;
+    }
+}
+
+@include text-emphasis-variant(".text-theme", $theme-color);
+
+// BG color new
+
+@include bg-variant-fix(".bg-new1", #474747);
+
+@include bg-variant-fix(".bg-new2", #29cc9b);
+
+@include bg-variant-fix(".bg-new3", #ced016);
+
+@include bg-variant-fix(".bg-new4", #e39a1b);
+
+@include bg-variant-fix(".bg-new5", #ec5777);
+
+@include bg-variant-fix(".bg-new6", #9b30e5);
+
+@include bg-variant-fix(".bg-new7", #5331d2);
+
+@include bg-variant-fix(".bg-new8", #1ed2cc);
+
+@include bg-variant-fix(".bg-new9", #45a9fb);
+
+@include bg-variant-fix(".bg-new10", #45a9fb);
+
+@include bg-variant-fix(".bg-new11", #2edca8);
+
+@include bg-variant-fix(".bg-new12", #e39a1b);
+
+@include bg-variant-fix(".bg-new13", #ec5777);
+
+@include bg-variant-fix(".bg-new14", #9b30e5);
+
+@include bg-variant-fix(".bg-new15", #5331d2);
+
+@include bg-variant-fix(".bg-theme", $theme-color);
+
+//
+// Buttons
+// --------------------------------------------------
+
+// Common styles
+.btn {
+    // Remove the gradient for the pressed/active state
+    font-size: $font-size-base - 2;
+    text-transform: uppercase;
+    line-height: 20px;
+    border-radius: 0;
+    &:active,
+    &.active {
+        background-image: none;
+    }
+}
+
+.btn-default {
+    border-bottom-width: 2px;
+    &:hover,
+    &:focus,
+    &.focus {
+        background-color: $theme-color;
+        border-color: $theme-color $theme-color $btn-hover-cart-border;
+        color: #fff;
+    }
+}
+
+.dark {
+    background-color: #474747;
+    color: #fff;
+    border-color: #474747 #474747 #303030;
+}
+
+.sk {
+    background-color: #2b8cdb;
+    color: #fff;
+    border-color: #2b8cdb #2b8cdb #2a7abb;
+}
+
+.btn-nostyle {
+    background-color: transparent;
+    line-height: 20px;
+    border-width: 2px;
+}
+
+.font-small {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.btn-lg {
+    font-weight: 700;
+}
+
+//
+// Breadcrumbs
+// --------------------------------------------------
+.breadcrumb {
+    > li {
+        display: inline-block;
+        font-size: 15px;
+        + li:before {
+            font-family: FontAwesome;
+        }
+    }
+}
+
+//
+// Navs
+// --------------------------------------------------
+.nav {
+    > li {
+        > a {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .open > a {
+        &,
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+}
+
+.nav-style {
+    > li {
+        @include rtl-float-left;
+        margin-bottom: -1px;
+        > a {
+            border: 1px solid $border-color-base;
+            background-color: #fff;
+        }
+        + li {
+            @include rtl-margin-left(5px);
+        }
+        // Active state
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: $theme-color;
+                border-color: $theme-color;
+            }
+        }
+    }
+}
+
+.nav-color {
+    > li {
+        > a {
+            color: #fff;
+            outline: none;
+        }
+        // Active state
+        // &.active > a {
+        //     &,
+        //     &:hover,
+        //     &:focus {
+        //         color: #000;
+        //         background-color: #fff;
+        //         border-color: $theme-color;
+        //         outline: none;
+        //     }
+        // }
+        &.active {
+            outline: none;
+            &:after {
+                width: 0;
+                height: 0;
+                content: "";
+                position: absolute;
+                border-bottom: 8px solid #fff;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                left: 50%;
+                bottom: 0;
+                @include rtl-margin-left(-8px);
+                z-index: 9999;
+            }
+        }
+    }
+}
+
+.overwrite-color {
+    .nav-color {
+        margin-top: -1px;
+        > li {
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #dedede;
+            border-top: 1px solid #dedede;
+            & + li {
+                @include rtl-border-left(1px solid #dedede);
+            }
+            > a {
+                color: #999;
+            }
+            &:before {
+                height: 2px;
+            }
+            // Active state
+            &.active {
+                border-color: #474747;
+                &:after {
+                    border: none;
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    position: absolute;
+                    background-color: #474747;
+                    bottom: -5px;
+                    @include rtl-margin-left(-5px);
+                    @include rtl-left(50%);
+                    @include rotate(45deg);
+                    z-index: 9999;
+                }
+                &:before {
+                    height: 0;
+                }
+                > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        background-color: #474747;
+                        border-color: #474747;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 
+// List Option
+// -------------------------------------------------
+.list-unstyled {
+    > li {
+        margin: 10px 0;
+        > a {
+            text-decoration: none;
+            font-weight: 300;
+        }
+    }
+}
+
+.list-arrow {
+    list-style-type: none;
+    @include rtl-padding-left(0);
+    > li {
+        margin: 10px 0;
+        &:before {
+            content: "\f178";
+            font-family: FontAwesome;
+            display: inline-block;
+            font-size: 10px;
+            @include rtl-margin-right(10px);
+        }
+        a > {}
+    }
+}
+
+//
+// Input Group
+// ---------------------------------
+.input-group {
+    .input-group-btn {
+        .btn {
+            height: $input-height-base;
+            border-radius: $input-border-radius;
+        }
+    }
+}
+
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            border-radius: 2px;
+        }
+    }
+}
+
+//
+// Images
+// --------------------------------------------------
+.thumbnail,
+.img-thumbnail {
+    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.075));
+}
+
+//
+// Dropdowns
+// --------------------------------------------------
+.dropdown {
+    &:hover {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+}
+
+// Open state for the dropdown
+.open {
+    // Show the menu
+    > .dropdown-menu {
+        margin-top: -1px;
+    }
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+//
+// Navbar
+// --------------------------------------------------
+// Default navbar
+
+//
+// Alerts
+// --------------------------------------------------
+// Common styles
+
+//
+// Progress bars
+// --------------------------------------------------
+// Give the progress background some depth
+.progress {
+    @include gradient-vertical($start-color: darken($progress-bg, 4%), $end-color: $progress-bg);
+}
+
+// Mixin for generating new styles
+@mixin progress-bar-styles($color) {
+    @include gradient-vertical($start-color: $color, $end-color: darken($color, 10%));
+}
+
+// Apply the mixin to the progress bars
+.progress-bar {
+    @include progress-bar-styles($progress-bar-bg);
+}
+
+.progress-bar-success {
+    @include progress-bar-styles($progress-bar-success-bg);
+}
+
+.progress-bar-info {
+    @include progress-bar-styles($progress-bar-info-bg);
+}
+
+.progress-bar-warning {
+    @include progress-bar-styles($progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+    @include progress-bar-styles($progress-bar-danger-bg);
+}
+
+// Reset the striped class because our mixins don't do multiple gradients and
+// the above custom styles override the new `.progress-bar-striped` in v3.2.0.
+.progress-bar-striped {
+    @include gradient-striped;
+}
+
+//
+// List groups
+// --------------------------------------------------
+// .list-group {
+//   border-radius: $border-radius-base;
+//   @include box-shadow(0 1px 2px rgba(0,0,0,.075));
+// }
+// .list-group-item.active,
+// .list-group-item.active:hover,
+// .list-group-item.active:focus {
+//   text-shadow: 0 -1px 0 darken($list-group-active-bg, 10%);
+//   @include gradient-vertical($start-color: $list-group-active-bg, $end-color: darken($list-group-active-bg, 7.5%));
+//   border-color: darken($list-group-active-border, 7.5%);
+
+//   .badge {
+//     text-shadow: none;
+//   }
+// }
+
+//
+// Panels
+// --------------------------------------------------
+// Common styles
+.panel-body {
+    padding: 20px;
+}
+
+//
+// Wells
+// --------------------------------------------------
+.well {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+// Sizes
+.well-lg {
+    padding: 24px;
+    border-radius: none;
+}
+
+.well-sm {
+    padding: 9px;
+    border-radius: none;
+}
+
+//
+// Blockquotes
+// --------------------------------------------------
+blockquote {
+    border-width: 3px;
+    padding: 0 10px;
+    &.border-primary {
+        border-color: $brand-primary;
+    }
+    &.border-success {
+        border-color: $brand-success;
+    }
+    &.border-info {
+        border-color: $brand-info;
+    }
+    &.border-warning {
+        border-color: $brand-warning;
+    }
+    &.border-danger {
+        border-color: $brand-danger;
+    }
+}
+
+//== Carousel
+// --------------------------------------------------
+.carousel-control {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid $border-color-base;
+    font-size: 14px;
+    line-height: 26px;
+    &.round {
+        border-radius: 50%;
+    }
+    &:hover {
+        border-color: $theme-color;
+        background-color: $theme-color;
+        color: #fff;
+    }
+    &.middle {
+        top: 50%;
+        margin-top: -12px;
+        z-index: 999;
+        &.left {
+            @include rtl-left(20px);
+        }
+        &.right {
+            @include rtl-right(20px);
+        }
+    }
+}
+
+.carousel-controls {
+    position: absolute;
+    @include rtl-right(0);
+    top: 13px;
+    width: 51px;
+    height: 26px;
+    .carousel-controls + .carousel-controls {
+        margin-left: -1px;
+    }
+}
+
+.vertical .carousel-inner {
+  height: 100%;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 400px;
+}
+
+.carousel.vertical .prev {
+  top: -400px;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -400px;
+}
+
+.carousel.vertical .active.right {
+  top: 400px;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}

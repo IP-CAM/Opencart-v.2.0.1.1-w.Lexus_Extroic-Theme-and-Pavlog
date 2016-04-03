@@ -1,0 +1,153 @@
+// lattest blog
+.latest_blog{
+  overflow: hidden;
+  .media{
+    padding: 25px 20px;
+    position: relative;
+  }
+
+  .title{
+    font-size: 17px;
+  }
+
+  .date{
+    font-size: 11px;
+  }
+
+  .description{
+    font-weight: 300;
+  }
+}
+
+// blog
+
+.#{$app-brand-prefix}-blog{
+  .captcha{
+    img{
+      margin-bottom: 15px;
+    }
+  }
+
+  .blog-tags{
+    b{
+      color: black;
+    }
+
+    a{
+      text-transform: capitalize;
+    }
+
+
+  }
+
+  .image{
+    margin-bottom: 20px;
+  }
+}
+
+.sidebar{
+  .latest_blog{
+    div[class*="col-"]{
+      width: 100%;
+      img{
+        width: 64px;
+      }
+      .description{
+        display: none;
+      }
+    }
+  }
+}
+
+.blog-item {
+  position: relative;
+  .create{
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background-color: $theme-color;
+    padding: 5px;
+    color: #fff;
+    -webkit-box-shadow: -1px 9px 20px -8px rgba(139,150,163,1);
+    -moz-box-shadow: -1px 9px 20px -8px rgba(139,150,163,1);
+    box-shadow: -1px 9px 20px -8px rgba(139,150,163,1);
+    &:before{
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      content: "";
+      width: 0; height: 0;
+      border-top: 10px solid #000;
+      border-bottom: 10px solid transparent;
+      border-left: 11px solid transparent;
+    }
+  }
+}
+
+// comment
+.pav-blog .blog-content, .pav-blog .blog-bottom { margin-bottom:20px }
+   .comment-item {
+	 
+		padding-bottom:10px;
+   }
+  .comment-item  img{
+	padding-right:12px;
+  }
+  .comment-wrap{
+	overflow:hidden;
+	  background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E5E5E5;
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease-out 0s;	
+  }
+  .comment-wrap .comment-meta{
+	 border-bottom: 1px solid #E5E5E5;
+    font-size: 11px;
+    margin: -20px -20px 10px;
+    padding: 10px 20px;
+  }
+  .comment-wrap .comment-meta > span { font-weight:bold; }
+   .comment-wrap .comment-meta > span  span{ font-weight:normal; }
+   .blog-social  .social-wrap > div { float:left; }
+   .blog-social .social-heading{ padding-right:12px; }
+   
+   .comment-link{
+	   background: none repeat scroll 0 0 #F4F4F4;
+    border-left: 1px solid #E5E5E5;
+    display: block;
+    float: right;
+    font-weight: bold;
+    margin: -11px -20px -10px 0;
+    padding: 10px 20px;
+   }
+
+ 
+   #comment-form .message{ background:#FCF8E3; padding: 12px; color:#000; margin:12px ;}
+   #comment-form .comment-warning{ color:#B94A48  } 
+
+   	#comment-form .input-group{	clear:both; padding: 6px 0;	}
+   #comment-form label{  
+		 
+		display: block;
+		line-height: 27px;
+		margin: 0;
+		width: 20%;
+   }
+    #comment-form input, #comment-form textarea{
+		 display: block;
+		margin: 0;
+		width: 77%;
+	}
+
+		#comment-form  .recaptcha{padding:12px; }
+		#comment-form  .recaptcha input { width: 140px; height:27px; display:inline; margin:0 12px; }
+   /**
+    * Module
+	*/
+	.pavblogs-comments-box  .pav-comment { padding:10px 0 ;border-bottom:1px solid #F4F4F4  }
+	.pavblogs-comments-box  .pav-comment:last-child{ border-bottom:none; }
+	.pavblogs-comments-box img{ 
+    @include rtl-padding-right(12px);
+    @include rtl-float-left();
+  }

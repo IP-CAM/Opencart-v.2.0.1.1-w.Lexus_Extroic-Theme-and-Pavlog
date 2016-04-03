@@ -1,0 +1,102 @@
+##{$app-brand-prefix}-megamenu {
+    @include rtl-margin-left(-15px);
+    margin-bottom: 0;
+    position: inherit;
+    .dropdown-submenu {
+        position: relative;
+        .dropdown-menu {
+            top: 0;
+            @include rtl-right(0);
+            @include rtl-left(100%);
+            display: none;
+        }
+        &:hover {
+            > .dropdown-menu {
+                display: block;
+            }
+        }
+    }
+
+    .caret {
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        padding: 25px;
+        min-width: 200px;
+        border: none;
+        ul {
+            list-style-type: none;
+            @include rtl-padding-left(0);
+            > li {
+                margin: 16px 0;
+                > a{
+                    font-family: $font-family-base;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+
+                &:before {
+                    width: 7px;
+                    height: 8px;
+                    display: inline-block;
+                    background-image: url("#{$image-theme-path-base}list.png");
+                    @include rtl-margin-right(10px);
+                    content: "";
+                    .rtl & {
+                        @include rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    // title heading
+    .widget-heading {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        color: #333;
+        text-transform: uppercase;
+        font-family: $font-family-base;
+    }
+    // dropdown menu align
+    .aligned-center > .dropdown-menu {
+        left: 50%;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -o-transform: translate(-50%);
+    }
+    .aligned-right > .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+    .aligned-left .dropdown-menu {}
+    .megamenu .aligned-fullwidth {
+        position: static;
+    }
+    .aligned-fullwidth .dropdown-menu {
+        width: 100% !important;
+        left: 0;
+        margin-top: -2px;
+    }
+
+    .nav > li > a {
+        color: #474747;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    .bg1 {
+        div.dropdown-menu {
+            background-image: url("#{$image-theme-path-base}megamenu/bg1.png");
+            background-position: top right;
+            background-repeat: no-repeat;
+        }
+    }
+
+}

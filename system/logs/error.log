@@ -1,0 +1,2 @@
+2016-04-02 14:19:53 - PHP Warning:  unlink(C:\xampp\htdocs\lexus/system/cache/cache.currency.1459580937): No such file or directory in C:\xampp\htdocs\lexus\system\library\cache\file.php on line 17
+2016-04-03 5:37:59 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\lexus\catalog\view\theme\lexus_extroic\template\common\deal_collection.tpl on line 23

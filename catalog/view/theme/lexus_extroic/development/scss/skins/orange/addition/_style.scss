@@ -1,0 +1,48 @@
+#header-layout {
+    .content-header {
+        padding-top: 0;
+    }
+    .media-icon {
+        color: #fff;
+    }
+    .media-text a {
+        color: white;
+    }
+    .nav.megamenu > li > a {
+        color: #fff;
+        .caret {
+            color: #fff;
+        }
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .cart .cart-total {
+        background-color: $brand-success;
+    }
+}
+
+.product-label {
+    &.flag {
+        background-color: #e14646;
+        &:before {
+            border-top: 15px solid #e14646;
+        }
+        &:after {
+            border-bottom: 15px solid #e14646;
+        }
+    }
+}
+
+#footer {
+    .#{$block-heading-selector} {
+        color: #fff;
+    }
+}
+
+.social li {
+    background-color: transparent;
+    border-color: #8a8a8a;
+}
+
+

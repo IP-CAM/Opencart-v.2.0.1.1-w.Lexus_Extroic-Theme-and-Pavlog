@@ -1,0 +1,53 @@
+$new-color: #2b8cdb !default;
+$hot-color: #e74848 !default;
+$sale-color: red !default;
+
+.new , .hot, .sale {
+    color: #fff;
+    font-size: 9px;
+    height: 13px;
+    line-height: 13px;
+    padding: 0 4px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    top: 2px;
+    transform: translateZ(0px);
+    border-radius: 1px;
+    font-family: arial;
+
+    &:before {
+        border-style: solid;
+        border-width: 4px 4px 0;
+        bottom: -3px;
+        content: "";
+        left: 5px;
+        pointer-events: none;
+        position: absolute;
+        transition-duration: 0.3s;
+        transition-property: bottom;
+        z-index: -1;
+    }
+}
+
+.new {
+	background-color: $new-color;
+    &:before {
+		border-color: $new-color transparent transparent;
+    }
+}
+
+.hot {
+	background-color: $hot-color;
+    &:before {
+		border-color: $hot-color transparent transparent;
+    }
+}
+
+.sale {
+	background-color: $sale-color;
+    &:before {
+		border-color: $sale-color transparent transparent;
+    }
+}

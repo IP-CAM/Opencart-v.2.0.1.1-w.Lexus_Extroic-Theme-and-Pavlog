@@ -1,0 +1,81 @@
+// auto search
+.autosearch-wrapper {
+    display: block;
+    width: 570px;
+    height: 40px;
+    position: relative;
+    border-top: 2px solid $theme-color;
+    border-bottom: 2px solid $theme-color;
+    .autosearch-input {
+        display: inline-block;
+        width: 68%;
+        @include rtl-float-left;
+        height: 36px;
+        border: none;
+        padding: 0 10px;
+        @include rtl-border-left(2px solid $theme-color);
+    }
+    .autosearch-category {
+        display: inline-block;
+        width: 24%;
+        position: relative;
+        overflow: hidden;
+        @include rtl-float-right;
+        @include rtl-border-left(1px solid $border-color-base);
+        cursor: pointer;
+        select {
+            display: inline-block;
+            border: none;
+            width: 130%;
+            height: 36px;
+            padding: 0 10px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+        .fa {
+            position: absolute;
+            top: 36%;
+            @include rtl-right(10px);
+        }
+    }
+    .autosearch-submit {
+        border: none;
+        display: inline-block;
+        width: 8%;
+        height: 36px;
+        background: $theme-color;
+        margin: 0;
+        @include rtl-float-right;
+        .fa {
+            color: #fff;
+        }
+    }
+    .search {
+        position: relative;
+        .autosearch {
+            width: 100%;    
+        }
+    }
+    .dropdown-menu {
+        > li {
+            &.media {
+                margin: 15px 10px;
+                overflow: hidden;
+            }
+
+            &.clearfix {
+                border-bottom: 1px dashed $border-color-base;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            > a {
+                padding: 0;
+            }
+        }
+    }
+}

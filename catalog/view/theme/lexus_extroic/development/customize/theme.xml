@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+	<div>
+		<title>Footer Center Block</title>
+		 <description></description>
+	 	 <module>
+	 	 	<title>Site info</title>
+	 	 	<field>
+	 	 		<name>widget_site_info</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[<div><img src="image/catalog/demo/banners/logo_info.png"><div><p>This is Photoshop's version&nbsp; of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.&nbsp; sem accumsan ipsum velit. <br></p>
+
+</div>
+
+</div>]]></default>
+	 		</field>
+	 	 </module>
+	 	 <module>
+	 	 	<title>Sosial</title>
+	 	 	<field>
+	 	 		<name>widget_sosial</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[<div class="box"><div class="box-heading">Follow us</div>
+<div class="box-content"><p>Aenean erat lacus, vulput<br>ate sit amet lacinia <br>ornare a augue.</p>
+<ul class="social">
+<li class="facebook"><a data-placement="top" data-toggle="tooltip" href="#" title="" data-original-title="Facebook"><i class="fa fa-facebook">&nbsp;</i></a></li>
+<li class="twitter"><a data-toggle="tooltip" href="#" title="" data-original-title="Twitter"><i class="fa fa-twitter">&nbsp;</i></a></li>
+<li class="google"><a data-toggle="tooltip" href="#" title="" data-original-title="Google Plus"><i class="fa fa-google-plus">&nbsp;</i></a></li>
+<li class="pinterest"><a data-toggle="tooltip" href="#" title="" data-original-title="Pinterest"><i class="fa fa-pinterest">&nbsp;</i></a></li>
+<li class="linkin"><a data-toggle="tooltip" href="#" title="" data-original-title="Linkedin"><i class="fa fa-linkedin-square">&nbsp;</i></a></li>
+<li class="vimeo"><a data-toggle="tooltip" href="#" title="" data-original-title="Vimeo"><i class="fa fa-vimeo-square">&nbsp;</i>&nbsp;</a></li>
+<li class="rss"><a data-toggle="tooltip" href="#" title="" data-original-title="Rss"><i class="fa fa-rss">&nbsp;</i>&nbsp;</a></li>
+</ul>
+</div>
+</div>]]></default>
+	 		</field>
+	 	 </module>	
+	</div>
+
+	<footer>
+		 <title>Footer Botton Block</title>
+		 <description></description>
+		  <module>
+	 	 	<title>Top Page Link</title>
+	 	 	<field>
+	 	 		<name>widget_toppage</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[<div class="box">
+<div class="box-heading"><span>Userful Links</span></div>
+
+<div class="box-content">
+<ul class="list-unstyled">
+
+	<li><a href="index.php?route=account/account">Pricing Policy</a></li>
+
+	<li><a href="index.php?route=account/order">Shipping Policy</a></li>
+
+	<li><a href="index.php?route=account/wishlist">Payment Methods</a></li>
+
+	<li><a href="index.php?route=account/newsletter">Site Information</a></li>
+
+</ul>
+
+</div>
+
+</div>]]></default>
+	 		</field>
+	 	 </module>	
+	 	 <module>
+	 	 	<title>Our Offers Link</title>
+	 	 	<field>
+	 	 		<name>widget_ouroffers</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[<div class="box">
+<div class="box-heading"><span>Our Offers</span></div>
+
+<div class="box-content">
+<ul class="list-unstyled">
+
+	<li><a href="index.php?route=account/account">Pricing Policy</a></li>
+
+	<li><a href="index.php?route=account/order">Shipping Policy</a></li>
+
+	<li><a href="index.php?route=account/wishlist">Payment Methods</a></li>
+
+	<li><a href="index.php?route=account/newsletter">Site Information</a></li>
+
+</ul>
+
+</div>
+
+</div>]]></default>
+	 		</field>
+	 	 </module>	
+	 	 <module>
+	 	 	<title>Logo Payment</title>
+	 	 	<field>
+	 	 		<name>widget_paypal</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[<img src="image/catalog/demo/payment.png">]]></default>
+	 		</field>
+	 	 </module>	
+	</footer>
+</theme>

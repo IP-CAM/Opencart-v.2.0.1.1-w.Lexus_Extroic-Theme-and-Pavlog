@@ -1,0 +1,64 @@
+.product-block {
+    // Product Layout Dual
+    &.item-dual {
+        .action {
+            position: absolute;
+            @include rtl-left(0);
+            top: 0;
+            > div {
+                @include transition-duration(0.1s);
+                margin-bottom: 6px;
+                @include translate(-100%, 0);
+                &:nth-of-type(2) {
+                    @include transition-delay(0.1s);
+                }
+                &:nth-of-type(3) {
+                    @include transition-delay(0.2s);
+                }
+                .rtl & {
+                    @include translate(100%, 0);
+                }
+            }
+        }
+        &:hover {
+            .action {
+                > div {
+                    @include translate(0, 0);
+                }
+            }
+        }
+    }
+    &.item-full {
+        .block-img {
+            position: relative;
+            overflow: hidden;
+        }
+        .action {
+            position: absolute;
+            left: 0;
+            top: 0;
+            > div {
+                @include transition-duration(0.1s);
+                margin-bottom: 10px;
+                @include translate(-100%, 0);
+                &:nth-of-type(2) {
+                    @include transition-delay(0.1s);
+                }
+                &:nth-of-type(3) {
+                    @include transition-delay(0.2s);
+                }
+            }
+        }
+        &:hover {
+            .action {
+                > div {
+                    @include translate(0, 0);
+                }
+            }
+        }
+    }
+}
+
+.#{$nameSpace}-banner {
+    @include curl-top-right;
+}

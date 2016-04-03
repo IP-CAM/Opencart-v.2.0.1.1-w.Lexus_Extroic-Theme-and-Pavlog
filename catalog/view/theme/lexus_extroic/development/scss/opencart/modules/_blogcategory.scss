@@ -1,0 +1,154 @@
+.pavblog-vertical {
+    border: 1px solid $border-color-base;
+    .navbar-nav {
+        @include clearfloat;
+        border: 1px solid $border-color-base;
+        background-color: #fff;
+
+        &.vertical {
+            border: none;
+        }
+        > li {
+            width: 100%;
+            background-color: #fff;
+            position: relative;
+            border-width: 1px 0;
+            border-color: transparent;
+            border-style: solid;
+            > a {
+                display: block;
+                text-transform: capitalize;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 12px 15px;
+                color: #555;
+                font-family: $font-family-base;
+                position: relative;
+
+                .fa {
+                    color: $theme-color;
+                    @include rtl-margin-right(5px);
+                    width: 20px;
+                }
+
+                .caret {
+                    @include rtl-float-right();
+                    @include rotate(-90deg);
+                    margin-top: 8px;
+
+                    .rtl & {
+                        @include rotate(90deg);
+                    }
+                }
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+            // Hover li
+            &:hover {
+                border-color: $border-color-base;
+                > .dropdown-menu {
+                    top: 0px;
+                    @include opacity(1);
+                    display: block;
+                    box-shadow: none;
+                    border-color: $border-color-base;
+                    @include rtl-margin-left(-1px);
+                    margin-top: -1px;
+                }
+                > a:after {
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    content: "";
+                    top: 0;
+                    @include rtl-right(-1px);
+                    background-color: #fff;
+                    z-index: 9999;
+                }
+            }
+
+            &:first-child {
+                >a {
+                    padding-top: 17px;
+                }
+                border-top: none;
+            }
+
+            &:last-child {
+                border-bottom: none !important;
+            }
+            &:before {
+                width: 10px;
+                display: inline-block;
+                color: $theme-color;
+            }
+            .parent {
+                position: relative;
+                > .dropdown-toggle {
+                    text-transform: none;
+                    font-weight: normal;
+                }
+                > .dropdown-menu {
+                    min-height: 100px;
+                }
+                &:hover {
+                    > .dropdown-menu {
+                        @include rtl-right(100%);
+                        top: 0px;
+                        @include opacity(1);
+                    }
+                }
+                /* level > 3 */
+                &.dropdown-submenu {
+                    &:hover {
+                        .dropdown-menu {
+                            @include rtl-right(115%);
+                            display: block;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        @include rtl-right(auto);
+        @include rtl-left(100%);
+        display: none;
+        min-width: $vertical-sub-menu-width;
+        @include opacity(0);
+        // padding: 25px;
+        &.level1 {
+            margin: 0;
+            padding: 0;
+        }
+        &.level2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        &.level3 {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            line-height: 25px;
+        }
+
+        ul {
+            list-style-type: none;
+            @include rtl-padding-left(0);
+            > li {
+                // margin: 10px 0;
+                > a{
+                    font-family: $font-family-base;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

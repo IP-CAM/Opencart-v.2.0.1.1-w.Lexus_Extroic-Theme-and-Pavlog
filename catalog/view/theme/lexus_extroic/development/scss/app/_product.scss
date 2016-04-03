@@ -1,0 +1,288 @@
+.box-products {
+    &:hover {
+        .carousel-control {
+            display: block;
+        }
+    }
+}
+
+.price {
+    // all page
+    font-family: $product-price-font-family;
+    line-height: 25px;
+    .price-new {
+        color: $product-price-color;
+        font-weight: $product-price-font-weight;
+        font-size: $product-price-font-size;
+        height: 20px;
+
+    }
+    .price-old {
+        font-size: $product-price-old-font-size;
+        color: $product-price-old-color;
+        text-decoration: line-through;
+        height: 16px;
+    }
+    // page product detail
+    &.detail {
+        .price-new {
+            font-size: $product-price-font-size + 6;
+            font-weight: 400;
+        }
+    }
+}
+
+.products-block {
+    overflow: hidden;
+    border: 1px solid $border-color-base;
+}
+
+.#{$products-row-selector} {
+    position: relative;
+    .#{$products-col-selector} {
+        padding: 25px 20px;
+        background-color: $product-content-bg;
+        min-height: 260px;
+    }
+}
+
+/* product style */
+.product-block {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    .description {
+        display: none;
+        font-size: $font-size-base;
+        line-height: 24px;
+    }
+    .name {
+        position: relative;
+        display: block;
+        font-size: $product-name-font-size;
+        font-family: $product-name-font-family;
+        height: 30px;
+        overflow: hidden;
+        a {
+            color: $product-name-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .image {
+        position: relative;
+        overflow: hidden;
+        border: $product-image-border;
+        text-align: center;
+        @include rounded-corners($product-image-radius);
+        .img-responsive {
+            display: inline-block;
+        }
+    }
+}
+
+.product-label {
+    color: $product-label-color;
+    font-size: $product-label-font-size;
+    font-weight: 700;
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    &.ribbon {
+        position: absolute;
+        @include rtl-right(0);
+        top: 0;
+        width: 50px;
+        height: 50px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            @include rtl-right(0);
+            width: 0;
+            height: 0;
+            border-top: 50px solid red;
+            @include rtl-border-left(50px solid transparent);
+        }
+        .product-label-special {
+            display: block;
+            text-align: center;
+            height: 100%;
+            padding-top: 2px;
+            @include rotate(45deg);
+        }
+    }
+    &.ribbon1 {
+        width: 85px;
+        height: 88px;
+        overflow: hidden;
+        position: absolute;
+        top: 0px;
+        @include rtl-right(0px);
+        z-index: 99;
+        display: block;
+        .product-label-special {
+            display: block;
+            text-transform: uppercase;
+            text-align: center;
+            @include rotate(45deg);
+            position: relative;
+            padding: 5px 0;
+            left: -5px;
+            top: 15px;
+            width: 120px;
+            background-color: $theme-color;
+            color: $white;
+            @include box-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+        }
+    }
+    &.bts {
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        width: 46px;
+        height: 20px;
+        position: absolute;
+        top: 10px;
+        background-color: $theme-color;
+        @include rtl-right(10px);
+        border-radius: 2px;
+        line-height: 20px;
+        .product-label-special {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            &:before {
+                content: "";
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 4px solid $theme-color;
+                height: 0;
+                width: 0;
+                position: absolute;
+                left: 42%;
+                bottom: -4px;
+            }
+        }
+    }
+    &.sale-exist {
+        // fix font
+        padding-top: 1px;
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        width: 50px;
+        height: 25px;
+        position: absolute;
+        top: 15px;
+        background-color: $theme-color;
+        @include rtl-right(10px);
+        line-height: 25px;
+        border-radius: 2px;
+    }
+
+    &.sale-border {
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        width: 40px;
+        height: 20px;
+        position: absolute;
+        top: 15px;
+        border: 2px solid #d95e41;
+        @include rtl-right(10px);
+        color: #474747;
+    }
+    &.flag {
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        width: 60px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        background-color: $brand-success;
+        @include rtl-left(0);
+        line-height: 30px;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            @include rtl-right(-15px);
+            top: 0;
+            border-top: 15px solid $brand-success;
+            @include rtl-border-right(15px solid transparent);
+        }
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            @include rtl-right(-15px);
+            bottom: 0;
+            border-bottom: 15px solid $brand-success;
+            @include rtl-border-right(15px solid transparent);
+        }
+    }
+}
+
+.rtl {
+    .product-label {
+        &.ribbon1, &.ribbon {
+            .product-label-special {
+                @include rotate(-45deg);
+            }
+        }
+    }
+}
+
+// custom for layout product
+.product-block {
+    // Skin dual
+    &.item-dual {
+        overflow: hidden;
+        .block-img {
+            width: 47%;
+            @include rtl-float-left;
+            position: relative;
+        }
+        .product-meta {
+            width: 50%;
+            @include rtl-float-right;
+        }
+    }
+}
+
+// Rating
+.rating {
+    font-weight: 300;
+    height: 11px;
+    line-height: 11px;
+    .fa-stack {
+        width: 1em;
+        font-size: 11px;
+        width: 11px;
+        height: 11px;
+        line-height: 11px;
+    }
+    .fa-star {
+        color: #f7bc3d;
+        height: 11px;
+        line-height: 11px;
+        
+    }
+    .fa-star-o {
+        color: #d5d5d5;
+        height: 11px;
+        line-height: 11px;
+    }
+}
+
+.cart {
+    .btn {
+        padding: 6px 20px;
+    }
+}

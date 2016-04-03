@@ -1,0 +1,127 @@
+//
+// Block
+// --------------------------------------------------
+
+// Base class
+.#{$block-selector} {
+    margin-bottom: $line-height-computed;
+    background-color: $panel-bg;
+    border: 1px solid transparent;
+    border-radius: $panel-border-radius;
+    position: relative;
+    &.margin_top {
+        margin-top: -22px;
+    }
+}
+
+// Panel contents
+.#{$block-content-selector} {
+    padding: $panel-body-padding;
+    @include clearfix;
+}
+
+// Optional heading
+.#{$block-heading-selector} {
+    padding: $panel-heading-padding;
+    @include rtl-padding-left(0);
+    border-bottom: 1px solid transparent;
+    font-size: 24px;
+    color: #474747;
+    font-weight: 400;
+}
+
+// Contextual variations
+.#{$block-prefix}-default {
+    @include box-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+}
+
+.#{$block-prefix}-primary {
+    @include box-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+}
+
+.#{$block-prefix}-success {
+    @include box-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+}
+
+.#{$block-prefix}-info {
+    @include box-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+}
+
+.#{$block-prefix}-warning {
+    @include box-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+}
+
+.#{$block-prefix}-danger {
+    @include box-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+}
+
+.#{$block-prefix}-white {
+    background-color: #fff;
+    border-color: $border-color-base;
+    .#{$block-heading-selector} {
+        border-color: $border-color-base;
+        padding: 10px 20px;
+    }
+}
+
+.hl {
+    .box-heading {
+        background-color: $theme-color;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 20px;
+        line-height: 20px;
+    }
+
+    .box-content {
+        background-color: #474747;
+        padding-top: 10px;
+    }
+
+    .list-group-item {
+        background-color: transparent;
+        border: none;
+        padding: 15px 20px;
+
+        .accordion-body{
+            @include rtl-padding-left(12px);
+            margin-top: 20px;
+            li {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    a {
+        color: #f5f5f5;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .list-group {
+        margin-bottom: 0;
+    }
+
+    .bg {
+       color: #fff;
+       .fa {
+        font-size: 10px;
+       }
+    }
+}
+
+#footer {
+    .#{$block-heading-selector} {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #474747;
+    }
+    .#{$block-content-selector} {
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<themeeditor>
+	<author>pavotheme</author>
+	<name>Live Theme Editor</name>	
+	<layout>		
+		
+		<item>
+			<label>Enable Catalog Mode</label>
+			<block>catalog_mode</block>
+			<default>0</default>
+			<option>
+				<text>No</text>
+				<value>0</value>
+			</option> 
+			<option>
+				<text>Yes</text>
+				<value>1</value>
+			</option>
+		</item>
+
+		<item>
+			<label>Template Layout Mode</label>
+			<block>template_layout</block>
+			<default>fullwidth</default>
+			<option>
+				<text>Full Width</text>
+				<value>fullwidth</value>
+			</option> 
+			<option>
+				<text>Boxed Large</text>
+				<value>boxed-lg</value>
+			</option>
+		</item>
+		
+		<item>
+			<label>Enable Custom Header</label>
+			<block>custom_header</block>
+			<default>0</default>
+			<option>
+				<text>No</text>
+				<value>0</value>
+			</option> 
+			<option>
+				<text>Yes</text>
+				<value>1</value>
+			</option>
+		</item>
+	
+		<item>
+			<label>Logo Type</label>
+			<block>logo_type</block>
+			<default>logo-theme</default>
+			<option>
+				<text>Logo In Theme</text>
+				<value>logo-theme</value>
+			</option> 
+			<option>
+				<text>Logo Opencart</text>
+				<value>logo-opencart</value>
+			</option> 
+		</item>
+
+		<item>
+			<label>Product Detail Layout</label>
+			<block>product_detail_layout</block>
+			<default>default</default>
+			<option>
+				<text>Default</text>
+				<value>default</value>
+			</option> 
+			<option>
+				<text>Default 2</text>
+				<value>default2</value>
+			</option> 
+			<option>
+				<text>With Custom Content</text>
+				<value>custom</value>
+			</option> 
+		</item>
+		<!-- layout breakcrumb 
+	1, full width
+	2, 
+	-->
+
+	</layout>
+</themeeditor>

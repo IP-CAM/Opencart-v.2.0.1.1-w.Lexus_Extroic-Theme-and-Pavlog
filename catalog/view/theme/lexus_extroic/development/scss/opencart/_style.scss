@@ -1,0 +1,187 @@
+#sys-notification {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    z-index: 9999;
+}
+
+// Social
+.social {
+    li {
+        @include rtl-float-left;
+        background-color: #fff;
+        border: 1px solid $border-color-base;
+        @include rounded-corners(2px);
+        text-align: center;
+        @include rtl-margin-right(5px);
+        margin-bottom: 5px;
+        @include size(28px, 28px);
+        display: table;
+        a {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .fa {
+            @include rtl-margin-left(3px);
+            color: #aaaaaa;
+        }
+        &:hover {
+            background-color: $theme-color;
+            border-color: $theme-color;
+            .fa {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// Address
+.address {
+    a {
+        color: $footer-color !important;
+        &:hover {
+            color: $theme-color !important;
+        }
+    }
+    .fa {
+        @include rtl-margin-right(10px);
+    }
+}
+
+// text welcome
+.welcome {
+    margin: 0;
+    line-height: 36px;
+    font-size: 12px;
+    font-weight: 400;
+    a {
+        color: $theme-color;
+    }
+    text-transform: uppercase;
+}
+
+/* back top top */
+.scrollup {
+    background: $theme-color-default;
+    bottom: 82px;
+    display: none;
+    position: fixed;
+    right: 10px;
+    @include rounded-corners(100%);
+    @include size(40px, 40px);
+    text-align: center;
+    font-size: 13px;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 2px;
+    z-index: 9999;
+    .fa {
+        display: block;
+    }
+}
+
+// media icon for user and cart
+.media-icon {
+    overflow: hidden;
+    @include rtl-float-left;
+    .icon {
+        display: inline-block;
+        @include size(42px, 42px);
+        @include rtl-float-left;
+    }
+    .media-text {
+        @include rtl-float-left;
+        p {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+// style for header icon cart and login
+.user-icon {
+    background: url("#{$image-theme-path}user-icon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.user {
+    .media-text {
+        height: 42px;
+        line-height: 42px;
+    }
+}
+
+.cart-icon {
+    background: url("#{$image-theme-path}cart-icon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.no-padding-col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+// Style fore check box Availability: In Stock page product
+.check-box {
+    @include size(16px, 16px);
+    line-height: 14px;
+    border: 1px solid $border-color-base;
+    border-radius: 2px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+// Border all
+.border {
+    &:before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        @include rtl-right(-1px);
+        top: 0;
+        background-color: $border-color-base;
+        z-index: 9;
+    }
+    &:after {
+        content: "";
+        width: 9999px;
+        height: 1px;
+        position: absolute;
+        @include rtl-left(-10px);
+        top: -1px;
+        background-color: $border-color-base;
+        z-index: 9;
+    }
+}
+
+.border-left {
+    &:before {
+        content: "";
+        width: 1px;
+        height: 9999px;
+        position: absolute;
+        @include rtl-left(-1px);
+        top: 0;
+        background-color: $border-color-base;
+        z-index: 998;
+    }
+    &:after {
+        content: "";
+        width: 9999px;
+        height: 1px;
+        position: absolute;
+        @include rtl-left(-10px);
+        top: -1px;
+        background-color: $border-color-base;
+        z-index: 998;
+    }
+}
+
+// fix
+.top0 {
+    margin-top: 0;
+}

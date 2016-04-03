@@ -1,0 +1,77 @@
+/******************************************************
+ * @package Pav Opencart Theme Framework for Opencart 1.5.x
+ * @version 3.0
+ * @author http://www.pavothemes.com
+ * @copyright	Copyright (C) May 2014 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
+ * @license		GNU General Public License version 2
+*******************************************************/
+
+// Using Variables Of Pavoframework
+// Core variables and mixins
+
+// $theme-color: #e47c00 !default;
+
+@import "orange/vars/bootstrap";
+
+@import "orange/vars/opencart";
+
+@import "orange/vars/layout";
+
+@import "../vars/bootstrap";
+
+@import "../vars/opencart";
+
+@import "../mixins/bootstrap";
+@import "../mixins/app";
+
+@import "../app/base";
+	
+@import "../opencart/typo";
+ 
+@import "../app/form";
+
+@import "../app/layout";
+
+@import "../app/block";
+
+@import "../app/product";
+
+@import "../app/modules";
+
+@import "../opencart/opencart-modules";
+
+@import "../opencart/opencart-pages";
+ 
+@import "../app/menu";
+
+@import "../opencart/offcanvas";
+
+@import "../opencart/style";
+
+@import "../app/animation"; 
+
+@import "../app/animation"; 
+
+@import "../bootstrap/theme"; 
+
+// modules
+@import "../opencart/modules/deals.scss";
+
+@import "../opencart/modules/blogs.scss";
+
+@import "../opencart/modules/autosearch.scss";
+
+@import "../opencart/modules/megamenu.scss";
+
+@import "../opencart/modules/verticalmenu.scss";
+
+@import "../opencart/modules/slider.scss";
+
+@import "../opencart/modules/blogcategory.scss";
+
+// overwire css
+@import "../opencart/responsive";
+
+// fix
+@import "orange/addition/style";
+

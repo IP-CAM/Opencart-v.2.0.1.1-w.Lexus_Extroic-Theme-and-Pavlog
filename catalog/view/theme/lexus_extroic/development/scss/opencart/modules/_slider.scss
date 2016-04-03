@@ -1,0 +1,59 @@
+.fix-margin-right{
+	@include rtl-margin-right(-20px !important);
+}
+
+.text-hind-light-28{
+	color: #fff;
+	font-size: 28px;
+	font-weight: 300;
+}
+
+.text-hind-bold-72{
+	color: #fff;
+	font-size: 72px;
+	font-weight: bold;
+	sup{
+		font-size: 65%;
+	}
+}
+
+
+.text-hind-regular-40{
+	color: #474747;
+	font-size: 40px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.text-hind-light-14{
+	color: #000;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-regular {
+	font-weight: 400;
+}
+
+@for $i from 9 through 90 {
+  .text-font-#{$i} { font-size: 1px * $i; }
+}
+
+@each $w in 100 300 400 500 700 900 {
+	.font-weight-#{$w} {
+		font-weight: $w;
+	}
+}
+
+.text-white {
+	color: #fff;
+}
+
+.roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
